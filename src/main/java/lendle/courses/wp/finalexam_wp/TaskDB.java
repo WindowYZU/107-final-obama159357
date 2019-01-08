@@ -7,6 +7,8 @@ package lendle.courses.wp.finalexam_wp;
 
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JDesktopPane;
+import javax.swing.JInternalFrame;
 
 /**
  *
@@ -21,5 +23,13 @@ public class TaskDB{
     
     public static String get(String title){
         return db.get(title);
+    }
+
+    static void add(JInternalFrame jInternalFrame) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static void setContentPane(JDesktopPane jDesktopPane) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

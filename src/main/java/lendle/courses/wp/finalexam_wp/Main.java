@@ -5,9 +5,13 @@
  */
 package lendle.courses.wp.finalexam_wp;
 
+import java.awt.BorderLayout;
 import javax.swing.DefaultListModel;
+import javax.swing.JDesktopPane;
+import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -106,7 +110,7 @@ public class Main extends javax.swing.JFrame {
         DefaultListModel model = (DefaultListModel) this.jList1.getModel();
         if (model.contains(title)) {
             //Q1: 開啟 message dialog （10%）
-            
+             JOptionPane.showMessageDialog(this, "不可以重複","",JOptionPane.ERROR_MESSAGE);
             ////////////////////
             return;
         }
@@ -114,7 +118,17 @@ public class Main extends javax.swing.JFrame {
         model.addElement(title);
         //Q2: 建立 TaskFrame（等同於 JInternalFrame）
         //加到 jDesktopPane1 (20%)
-        
+        JDesktopPane jDesktopPane=new JDesktopPane();
+        TaskDB.setContentPane(jDesktopPane);
+        for(int i=0; i<10; i++){       
+        JInternalFrame jInternalFrame=new JInternalFrame();
+        TaskDB.add(jInternalFrame);
+        jInternalFrame.setSize(300,300);
+        jInternalFrame.setVisible(true);
+        jInternalFrame.setMaximizable(true);
+        jInternalFrame.setIconifiable(true);
+        jInternalFrame.setResizable(true);
+        }         
         ///////////////////////////////////////
     }//GEN-LAST:event_buttonNewActionPerformed
 
@@ -133,7 +147,17 @@ public class Main extends javax.swing.JFrame {
             //Q3: 建立 TaskFrame（等同於 JInternalFrame）
             //設定 noteTitle, noteContent
             //加到 jDesktopPane1 (20%)
-            
+            JDesktopPane jDesktopPane=new JDesktopPane();
+            TaskDB.setContentPane(jDesktopPane);
+            for(int i=0; i<10; i++){       
+            JInternalFrame jInternalFrame=new JInternalFrame();
+            TaskDB.add(jInternalFrame);
+            jInternalFrame.setSize(300,300);
+            jInternalFrame.setVisible(true);
+            jInternalFrame.setMaximizable(true);
+            jInternalFrame.setIconifiable(true);
+            jInternalFrame.setResizable(true);
+        }
             //////////////////////////////////////////
         }
     }//GEN-LAST:event_jList1MouseClicked
